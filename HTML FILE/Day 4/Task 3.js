@@ -1,41 +1,28 @@
-// Step 1: Create arrays of numbers and strings
+const numArray = [1, 2, 3, 4, 5];
 
-let numbers = [10, 20, 30, 40, 50];
-console.log('Initial Numbers Array:', numbers);
+// 1. Use forEach() to iterate and print elements
+console.log("Using forEach():");
+numArray.forEach((element) => {
+    console.log(element);
+});
 
-// Array of strings
-let fruits = ["apple", "banana", "cherry"];
-console.log('Initial Fruits Array:', fruits);
+// 2. Use map() to transform array elements (e.g., square numbers)
+const squaredArray = numArray.map((element) => element * element);
+console.log("Using map() to square numbers:");
+console.log(squaredArray);
 
-// Step 2: Access and modify elements
+// 3. for-in loop to loop over the indexes
+console.log("Using for-in loop:");
+for (let idx in numArray) {
+    console.log(`Index: ${idx}, Value: ${numArray[idx]}`);
+}
 
-// Accessing elements (indexing starts from 0)
-console.log('First number:', numbers[0]);
-console.log('Second fruit:', fruits[1]);
-// Modifying elements
-numbers[2] = 100;
-fruits[1] = "orange";
-console.log('Modified Numbers Array:', numbers);
-console.log('Modified Fruits Array:', fruits);
+// 4. for-of loop to loop over values
+console.log("Using for-of loop:");
+for (let item of numArray) {
+    console.log(item);
+}
 
-// Step 3: Use `.length` to get the array size
-
-console.log('Length of Numbers Array:', numbers.length);
-console.log('Length of Fruits Array:', fruits.length);
-// Step 4: Adding elements using `.push()` and `.unshift()`
-
-numbers.push(60);
-fruits.unshift("mango");
-console.log('After Adding Elements:');
-console.log('Numbers Array (After push):', numbers);
-console.log('Fruits Array (After unshift):', fruits);
-
-// Step 5: Removing elements using `.pop()` and `.shift()`
-
-let removedNumber = numbers.pop();
-let removedFruit = fruits.shift();
-console.log('After Removing Elements:');
-console.log('Numbers Array (After pop):', numbers);
-console.log('Fruits Array (After shift):', fruits);
-console.log('Removed Number:', removedNumber);
-console.log('Removed Fruit:', removedFruit);
+// 5. Compare outputs and behaviors
+console.log("Original array:", numArray);
+console.log("Squared array:", squaredArray);

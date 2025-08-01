@@ -1,13 +1,26 @@
-Task 1: Advanced Array Methods (45 mins)
+//---Use filter()---//
+let numbers=[2,4,6,8,10];
+let filteredNumbers=numbers.filter[num=>6];
+console.log(filteredNumbers);
 
-Write examples that:
+//---Use reduce()---//
+let sum=numbers.reduce((acc,num)=>acc+num,0);
+console.log(sum);
+let product=numbers.reduce((acc,num)=>acc*num,1);
+console.log(product);
+let strings=['Hello'.'','World'];
+let concatenatedString=strings.reduce((acc,str)=>acc+str,");
+console.log(concatenatedString);
 
-Use filter() to get a subset of array elements (e.g., numbers > 10)
+//---Use slice()---//
+let slicedNumbers=numbers.slice(1,3);
+console.log(slicedNumbers);
+console.log(numbers);
 
-Use reduce() to calculate the sum, product, or concatenate strings
+//---Use splice()---//
+let splicedNumbers=[...numbers];
+splicedNumbers.splice(1,1,12);
+console.log(splicedNumbers);
 
-Use slice() to extract a portion of an array without modifying the original
-
-Use splice() to remove and/or add elements in an array
-
-Use the spread operator to clone an array and merge two arrays
+let clonedNumbers=[...numbers];
+console.log(clonedNumbers);

@@ -1,9 +1,45 @@
-Task 3: Object Destructuring and Spread (15 mins)
+// Object Destructuring
+let student = {
+  name: 'John Doe',
+  age: 20,
+  course: 'JavaScript'
+};
 
-Use destructuring to extract properties from objects into variables
+// Extract properties from objects into variables
+let { name, age } = student;
+console.log(name); 
+console.log(age); 
 
-Use destructuring with default values and nested objects
+// Destructuring with default values
+let { courseName = 'Default Course' } = { courseName: undefined };
+console.log(courseName); // 
 
-Use the spread operator to clone and merge objects
+let { course: courseTitle = 'Default Course' } = student;
+console.log(courseTitle); 
 
-Write short code snippets demonstrating these concepts
+// Destructuring with nested objects
+let nestedStudent = {
+  name: 'Jane Doe',
+  age: 22,
+  address: {
+    street: '123 Main St',
+    city: 'Anytown'
+  }
+};
+
+let { address: { street, city } } = nestedStudent;
+console.log(street); 
+console.log(city);
+
+// Spread Operator
+let clonedStudent = { ...student };
+console.log(clonedStudent); 
+
+// Merge objects
+let additionalInfo = {
+  grade: 'A',
+  attendance: 'Regular'
+};
+
+let mergedStudent = { ...student, ...additionalInfo };
+console.log(mergedStudent);
